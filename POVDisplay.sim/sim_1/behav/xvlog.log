@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Philip Glynn/Desktop/Verilog/HDL files/povDisplay.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arrays_data
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Philip Glynn/POVDisplay/POVDisplay.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

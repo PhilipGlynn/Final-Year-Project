@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Sat Dec 10 16:37:32 2016
+# Process ID: 11916
+# Current directory: C:/Users/Philip Glynn/Desktop/POVDisplay
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12840 C:\Users\Philip Glynn\Desktop\POVDisplay\POVDisplay.xpr
+# Log file: C:/Users/Philip Glynn/Desktop/POVDisplay/vivado.log
+# Journal file: C:/Users/Philip Glynn/Desktop/POVDisplay\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.xpr}
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run impl_1

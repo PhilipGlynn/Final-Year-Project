@@ -1,0 +1,7 @@
+Running: xsim.dir/povDisplay_behav/xsimk.exe -simmode gui -wdb povDisplay_behav.wdb -simrunnum 0 -socket 53621
+Design successfully loaded
+Design Loading Memory Usage: 8404 KB (Peak: 8404 KB)
+Design Loading CPU Usage: 77 ms
+Simulation completed
+Simulation Memory Usage: 8808 KB (Peak: 8808 KB)
+Simulation CPU Usage: 77 ms

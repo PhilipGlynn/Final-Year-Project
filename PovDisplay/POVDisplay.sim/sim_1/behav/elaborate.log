@@ -1,0 +1,61 @@
+Vivado Simulator 2016.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto a2a9ad87e9114545a2859b83df66b6da --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot povDisplay_behav xil_defaultlib.povDisplay xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-597] element index 8 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:19]
+WARNING: [VRFC 10-597] element index 9 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:20]
+WARNING: [VRFC 10-597] element index 10 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:21]
+WARNING: [VRFC 10-597] element index 11 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:22]
+WARNING: [VRFC 10-597] element index 12 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:23]
+WARNING: [VRFC 10-597] element index 13 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:24]
+WARNING: [VRFC 10-597] element index 14 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:25]
+WARNING: [VRFC 10-597] element index 15 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:26]
+WARNING: [VRFC 10-597] element index 16 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:27]
+WARNING: [VRFC 10-597] element index 17 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:28]
+WARNING: [VRFC 10-597] element index 18 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:29]
+WARNING: [VRFC 10-597] element index 19 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:30]
+WARNING: [VRFC 10-597] element index 20 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:31]
+WARNING: [VRFC 10-597] element index 21 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:32]
+WARNING: [VRFC 10-597] element index 22 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:33]
+WARNING: [VRFC 10-597] element index 23 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:34]
+WARNING: [VRFC 10-597] element index 24 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:35]
+WARNING: [VRFC 10-597] element index 25 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:36]
+WARNING: [VRFC 10-597] element index 26 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:37]
+WARNING: [VRFC 10-597] element index 27 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:38]
+WARNING: [VRFC 10-597] element index 28 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:39]
+WARNING: [VRFC 10-597] element index 29 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:40]
+WARNING: [VRFC 10-597] element index 30 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:41]
+WARNING: [VRFC 10-597] element index 31 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:42]
+WARNING: [VRFC 10-597] element index 32 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:43]
+WARNING: [VRFC 10-597] element index 33 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:44]
+WARNING: [VRFC 10-597] element index 34 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:45]
+WARNING: [VRFC 10-597] element index 35 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:46]
+WARNING: [VRFC 10-597] element index 36 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:47]
+WARNING: [VRFC 10-597] element index 37 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:48]
+WARNING: [VRFC 10-597] element index 38 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:49]
+WARNING: [VRFC 10-597] element index 39 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:50]
+WARNING: [VRFC 10-597] element index 40 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:51]
+WARNING: [VRFC 10-597] element index 41 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:52]
+WARNING: [VRFC 10-597] element index 42 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:53]
+WARNING: [VRFC 10-597] element index 43 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:54]
+WARNING: [VRFC 10-597] element index 44 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:55]
+WARNING: [VRFC 10-597] element index 45 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:56]
+WARNING: [VRFC 10-597] element index 46 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:57]
+WARNING: [VRFC 10-597] element index 47 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:58]
+WARNING: [VRFC 10-597] element index 48 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:59]
+WARNING: [VRFC 10-597] element index 49 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:60]
+WARNING: [VRFC 10-597] element index 50 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:61]
+WARNING: [VRFC 10-597] element index 51 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:62]
+WARNING: [VRFC 10-597] element index 52 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:63]
+WARNING: [VRFC 10-597] element index 53 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:64]
+WARNING: [VRFC 10-597] element index 54 into ledColour is out of bounds [C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.srcs/sources_1/imports/HDL files/povDisplay.sv:65]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/Philip Glynn/Desktop/POVDisplay/POVDisplay.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.povDisplay
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot povDisplay_behav

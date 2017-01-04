@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Wed Jan 04 21:25:27 2017
+# Process ID: 14044
+# Current directory: C:/Users/sgspe/Documents/project/PovDisplay
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15816 C:\Users\sgspe\Documents\project\PovDisplay\POVDisplay.xpr
+# Log file: C:/Users/sgspe/Documents/project/PovDisplay/vivado.log
+# Journal file: C:/Users/sgspe/Documents/project/PovDisplay\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/sgspe/Documents/project/PovDisplay/POVDisplay.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/sgspe/Documents/project/Pov display' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IP Output Repository Path: Could not find the directory 'C:/Users/sgspe/Documents/project/PovDisplay/POVDisplay.cache/ip', nor could it be found using path 'C:/Users/sgspe/Documents/project/Pov display/POVDisplay.cache/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.3/data/ip'.

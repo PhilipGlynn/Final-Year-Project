@@ -1,0 +1,135 @@
+/*
+
+Vivado v2016.3 (64-bit)
+SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+Process ID: 9908
+
+Current time: 	12/12/16 9:34:48 PM GMT
+Time zone: 	Greenwich Mean Time (Europe/London)
+
+OS: Windows 10
+Version: 10.0
+Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 2560x1440
+Screen resolution (DPI): 96
+Available screens: 2
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	C:/Xilinx/Vivado/2016.3/tps/win64/jre
+
+User name: 	sgspe
+User home directory: C:/Users/sgspe
+User working directory: C:/Users/sgspe/Desktop/POVDisplay2
+User country: 	GB
+User language: 	en
+User locale: 	en_GB
+
+RDI base root directory: C:/Xilinx/Vivado
+RDI data directory: C:/Xilinx/Vivado/2016.3/data
+RDI bin directory: C:/Xilinx/Vivado/2016.3/bin
+
+Vivado preferences path: C:/Users/sgspe/AppData/Roaming/Xilinx/Vivado/2016.3/vivado.ini
+Vivado layouts directory: C:/Users/sgspe/AppData/Roaming/Xilinx/Vivado/2016.3/layouts
+
+GUI allocated memory:	235 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 540 MB
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bt:g (cd:JFrame):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\sgspe\Desktop\POVDisplay2\POVDisplay.xpr. Version: Vivado v2016.3 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/sgspe/Desktop/POVDisplay2/POVDisplay.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/Philip Glynn/Desktop/POVDisplay' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 78 MB (+79528kb) [00:00:03]
+// [Engine Memory]: 479 MB (+350534kb) [00:00:03]
+// [Engine Memory]: 529 MB (+27314kb) [00:00:04]
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.3/data/ip'. 
+// Project name: POVDisplay; location: C:/Users/sgspe/Desktop/POVDisplay2; part: xc7a35ticpg236-1L
+dismissDialog("Open Project"); // bt:g (cd:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 541 MB. GUI used memory: 41 MB. Current time: 12/12/16 9:34:50 PM GMT
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, povDisplay (povDisplay.sv)]", 1, false); // y:i (D:JPanel, cd:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, povDisplay (povDisplay.sv)]", 1, false, false, false, false, false, true); // y:i (D:JPanel, cd:JFrame) - Double Click
+// [Engine Memory]: 610 MB (+57026kb) [00:00:14]
+selectCodeEditor("povDisplay.sv", 295, 653); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 2, 653); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 36 seconds
+selectCodeEditor("povDisplay.sv", 139, 231); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 138, 28); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "povDisplay.sv", 'c'); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 392, 43); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "povDisplay.sv", 'v'); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 13 seconds
+typeControlKey((HResource) null, "povDisplay.sv", 'v'); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 10 seconds
+typeControlKey((HResource) null, "povDisplay.sv", 'v'); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 720, 323); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 391, 265); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 391, 265, false, false, false, false, true); // bF:I (JPanel:JComponent, cd:JFrame) - Double Click
+typeControlKey((HResource) null, "povDisplay.sv", 'c'); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("povDisplay.sv", 296, 60); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 296, 60, false, false, false, false, true); // bF:I (JPanel:JComponent, cd:JFrame) - Double Click
+typeControlKey((HResource) null, "povDisplay.sv", 'v'); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 382, 606); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 382, 606, false, false, false, false, true); // bF:I (JPanel:JComponent, cd:JFrame) - Double Click
+typeControlKey((HResource) null, "povDisplay.sv", 'c'); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 290, 77); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 290, 77, false, false, false, false, true); // bF:I (JPanel:JComponent, cd:JFrame) - Double Click
+typeControlKey((HResource) null, "povDisplay.sv", 'v'); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 233, 75); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 233, 75, false, false, false, false, true); // bF:I (JPanel:JComponent, cd:JFrame) - Double Click
+typeControlKey((HResource) null, "povDisplay.sv", 'c'); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 382, 429); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 382, 429, false, false, false, false, true); // bF:I (JPanel:JComponent, cd:JFrame) - Double Click
+typeControlKey((HResource) null, "povDisplay.sv", 'v'); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 425, 433); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 396, 501); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "povDisplay.sv", 'v'); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 396, 347); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 408, 345); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 408, 346, false, false, false, false, true); // bF:I (JPanel:JComponent, cd:JFrame) - Double Click
+typeControlKey((HResource) null, "povDisplay.sv", 'c'); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 404, 419); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "povDisplay.sv", 'v'); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 384, 640); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 294, 92); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 12 seconds
+selectCodeEditor("povDisplay.sv", 382, 584); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 373, 583); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 738, 533); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("povDisplay.sv", 292, 285); // bF:I (JPanel:JComponent, cd:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 84 MB (+2066kb) [00:03:15]
+// [GUI Memory]: 89 MB (+760kb) [00:03:41]

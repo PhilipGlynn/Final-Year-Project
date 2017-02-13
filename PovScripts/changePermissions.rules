@@ -1,0 +1,2 @@
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6010", GROUP="users", MODE="0666"
+## THis file must be put in /etc/udev/rules.d/ and the ipvendor and product must mach that of the device. This will change the permissions of the select3ed device so it can be written to without a  Password popup

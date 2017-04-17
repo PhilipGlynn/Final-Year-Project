@@ -1,0 +1,113 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -7.855
+TNS   : -736.613
+
+Type  : Slow 1200mV 85C Model Setup 'UART_RX:comb_3|r_recieveFlag'
+Slack : -3.177
+TNS   : -192.852
+
+Type  : Slow 1200mV 85C Model Setup 'hallSensor'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'UART_RX:comb_3|r_recieveFlag'
+Slack : -0.385
+TNS   : -11.302
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.325
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'hallSensor'
+Slack : 0.371
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -169.192
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'hallSensor'
+Slack : -3.000
+TNS   : -4.222
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UART_RX:comb_3|r_recieveFlag'
+Slack : -1.222
+TNS   : -97.760
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -6.996
+TNS   : -657.108
+
+Type  : Slow 1200mV 0C Model Setup 'UART_RX:comb_3|r_recieveFlag'
+Slack : -2.818
+TNS   : -168.307
+
+Type  : Slow 1200mV 0C Model Setup 'hallSensor'
+Slack : 0.397
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'UART_RX:comb_3|r_recieveFlag'
+Slack : -0.348
+TNS   : -10.193
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.295
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'hallSensor'
+Slack : 0.337
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -169.192
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'hallSensor'
+Slack : -3.000
+TNS   : -4.222
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UART_RX:comb_3|r_recieveFlag'
+Slack : -1.222
+TNS   : -97.760
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -3.249
+TNS   : -284.410
+
+Type  : Fast 1200mV 0C Model Setup 'UART_RX:comb_3|r_recieveFlag'
+Slack : -0.947
+TNS   : -49.579
+
+Type  : Fast 1200mV 0C Model Setup 'hallSensor'
+Slack : 0.693
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'UART_RX:comb_3|r_recieveFlag'
+Slack : -0.213
+TNS   : -6.705
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.149
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'hallSensor'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -143.683
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'hallSensor'
+Slack : -3.000
+TNS   : -4.092
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UART_RX:comb_3|r_recieveFlag'
+Slack : -1.000
+TNS   : -80.000
+
+------------------------------------------------------------

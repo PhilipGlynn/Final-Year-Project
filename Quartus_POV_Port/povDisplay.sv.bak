@@ -1,0 +1,251 @@
+module povDisplay (input clk, input wire hallSensor, input RxD,input RESET, output reg leds, output reg[7:0]led); //50Mhz CLK
+                    
+                    reg RecieveFlag;
+                    reg [31:0] verticlePixles = 56;
+                    reg [31:0] horizontalPixles = 18;
+                    reg [31:0] zeroLow = 34;
+                    reg [31:0] oneLow = 89;
+                    reg [31:0] Period = 125;
+                    reg [31:0] ledsIndex = 0;
+					reg [31:0] clkCount = 0;
+					reg [31:0] clkCount2 = 0;
+                    reg [31:0] clkCount3 = 0;	
+					//reg [31:0] leds = 0;
+					reg [23:0] colourReg ;
+					reg [23:0] ledsColour [54:0];
+                    reg [2:0] reset = 0;
+                    reg rpsToggle = 0;
+                    reg [31:0] firstRead = 0;
+                    reg checkPin = 0;
+                    reg [99:0] colourPos = 0;
+                    int position = 0;
+					//green red blue 
+                    reg [23:0] rgb [99:0];
+                    reg [7:0] RxData;
+                    int rotationTime = 3640000;
+                    reg [13:0] memAddr = 0;
+                    reg [13:0] memAddrRead = 0;
+                    
+                    reg [7:0] temp[2:0];
+                    reg [7:0] data[2:0];
+                    reg [23:0] memData;
+                    reg deleteMe = 0;
+                    reg [13:0] bitCounter;
+                    reg [13:0] UARTtimeout = 0;
+                    reg [13:0] memStep = 0;
+                    reg [13:0] memPos = 0;
+                    reg [8:0] forCounter = 0;
+                    reg we;
+                    reg oe;
+                    reg[9:0] forwardCount = 0;
+                    reg[9:0] backwardCount = 0;
+                    reg receivingLock = 0;
+                    reg receivingLockToggle = 0;
+                    reg [13:0] loopLimit;
+                    int charCounter  = 0;
+                    
+                    
+                    UART_RX( 
+                        .clk(clk),
+                        .reset(RESET),
+                        .RxD(RxD),
+                        .RxData(RxData),
+                        .o_recieveFlag(RecieveFlag)
+                        );
+                        
+                    memory(
+                        .clk(clk),
+                        .r_address(memAddrRead),
+                        .w_address(memAddr),
+                        .data(memData),
+                        .cs(1),
+                        .we(we),
+                        .oe(oe)
+                    );    
+
+			        always @ (posedge RecieveFlag)
+			        begin 
+//			        receivingLockToggle = 1;
+			         //perhaps swap out for recieve lock??
+			         
+//			         if(UARTtimeout == 0)
+//			         begin
+//                            memAddr = 0;   
+//                            charCounter = 0;              
+//			         end 		
+			        	       	         
+                     temp[charCounter] = RxData;
+                     //led = temp[charCounter];
+                     charCounter <= charCounter + 1;  
+                     if(charCounter == 2)
+                     begin   
+                        charCounter <= 0;
+                        forwardCount = 0;
+                        backwardCount = 7;
+                        for(forwardCount = 0; forwardCount <=7; forwardCount = forwardCount + 1)
+                        begin
+                            data[0][forwardCount] = temp[0][backwardCount];
+                            data[1][forwardCount] = temp[1][backwardCount];
+                            data[2][forwardCount] = temp[2][backwardCount];
+                            backwardCount = backwardCount - 1;
+                        end
+                        we = 1;
+                        memData <= {data[2], data[0],data[1]};
+                        colourReg = {data[2], data[0],data[1]};
+                        we = 0;                       
+                        memAddr = memAddr + 1;
+                     end
+//                     receivingLockToggle = 0;     
+			        end 
+//                    always @ ( posedge clk)
+//                    begin
+//                        // boolean set high in recievelock triogger    
+//                        if (receivingLockToggle == 1) // fix timeout
+//                        begin 
+//                            UARTtimeout <= 50000;                                       
+//                        end
+//                        else
+//                        begin
+//                             if(UARTtimeout != 0)
+//                              begin
+//                                  UARTtimeout = UARTtimeout - 1;
+//                              end
+//                        end
+//                        if(UARTtimeout > 0)
+//                        begin         
+//                            receivingLock = 1;                                                           
+//                        end
+//                        else
+//                        begin
+//                            receivingLock = 0;                                                         
+//                        end
+//                    end
+                    
+                    always @ ( posedge clk)
+                    begin
+                        
+//                        if(receivingLock ==  1)
+//                        begin
+//                            led = 8'hAA;
+//                        end
+//                        else
+//                        begin
+//                            led = 8'h00;
+//                        end
+                        if ( hallSensor == 0 && clkCount3 == 0)
+                           begin 
+                                
+                                 if (rpsToggle == 0)
+                                  begin
+                                       firstRead = clkCount3;
+                                       rpsToggle = 1;
+                                  end 
+                                  else
+                                  begin
+                                       rotationTime = clkCount3 - firstRead;
+                                       rotationTime = rotationTime / horizontalPixles;
+                                       firstRead = 0;
+                                       clkCount3 = 0;
+                                       rpsToggle = 0;
+                                  end  
+                                  checkPin = 1; 
+                            end  
+                            else if ( hallSensor == 1 &&  checkPin == 1)
+                            begin
+                                checkPin = 0;
+                            end   
+                        
+                        clkCount2 = clkCount2 + 1;
+                        clkCount3 = clkCount3 + 1;
+                        
+                        if (position == 24)
+                        begin
+                              position = 0;
+                              ledsIndex = ledsIndex + 1;
+                              leds = 0;
+                              clkCount = 0;
+                              if (clkCount2 >= rotationTime / horizontalPixles)
+                              begin
+//                                    // read in verticle line of pixles
+//                                    if(receivingLock == 0) //receivelock is currently not functional
+//                                    begin
+//                                            led = 8'h01;
+//                                            memStep = memPos;
+//                                            for(forCounter = 0; forCounter == 56; forCounter = forCounter + 1)
+//                                            begin 
+//                                            //led = 8'h01;
+//                                                 if(we == 0)
+//                                                 begin
+//                                                    oe = 1;
+//                                                    memAddrRead = memStep;
+//                                                    rgb[forCounter] = memData;
+//                                                    oe = 0;
+//                                                    memStep = memStep + 100; // change to use horizontal position when you get rotation timer working
+//                                                 end  
+                                                 
+//                                            end
+//                                            memPos = memPos + 1;
+//                                            if(memPos == 100)
+//                                            begin
+//                                                memPos = 0;
+//                                            end
+//                                    end      
+                              end
+                              if (ledsIndex == verticlePixles )
+                               begin  
+                                  reset = 1;
+                                  leds = 0;
+                                  ledsIndex = 0;
+                                  clkCount = 0;
+                               end    
+                                                  
+                        end
+                        if( reset == 0 )
+                        begin
+                               if (colourReg[position] == 0)
+                               begin
+                                    if (clkCount < zeroLow)
+                                    begin
+                                        leds = 1;
+                                    end
+                                    if (clkCount == zeroLow)
+                                    begin
+                                        leds = 0;
+                                    end                                     
+                               end 
+                               if (colourReg[position] == 1)
+                               begin
+                                   if (clkCount < oneLow)
+                                   begin
+                                       leds = 1;
+                                   end
+                                   if (clkCount == oneLow)
+                                   begin
+                                       leds = 0;
+                                   end                                     
+                               end 
+                                if( clkCount == Period )
+                                   begin
+                                       position = position + 1;
+                                       clkCount = 0;                                         
+                                       leds = 0;                                          
+                                   end 
+                               
+                        end
+                        if (reset == 1) 
+                        begin
+                        leds = 0;
+                            if(clkCount >= 5900) 
+                            begin
+                                reset = 0;
+                                clkCount = 0;
+                                ledsIndex = 0;
+                             end 
+                        end   
+                        clkCount = clkCount + 1;  
+                            
+                    end  
+                    
+                    
+                     
+endmodule		

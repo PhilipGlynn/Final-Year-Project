@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Sun Mar 26 17:54:36 2017
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Revision Name : PovDisplay
+Top-level Entity Name : povDisplay
+Family : MAX 10
+Total logic elements : 377
+    Total combinational functions : 344
+    Dedicated logic registers : 217
+Total registers : 217
+Total pins : 16
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

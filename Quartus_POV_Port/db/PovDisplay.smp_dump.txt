@@ -1,0 +1,20 @@
+
+State Machine - |povDisplay|DriveLed:driveLed4|reset
+Name reset.001 
+reset.000 0 
+reset.001 1 
+
+State Machine - |povDisplay|DriveLed:driveLed3|reset
+Name reset.001 
+reset.000 0 
+reset.001 1 
+
+State Machine - |povDisplay|DriveLed:driveLed2|reset
+Name reset.001 
+reset.000 0 
+reset.001 1 
+
+State Machine - |povDisplay|DriveLed:driveLed1|reset
+Name reset.001 
+reset.000 0 
+reset.001 1 

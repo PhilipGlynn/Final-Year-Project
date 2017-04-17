@@ -1,0 +1,167 @@
+Log started 09/29/2016 at 19:13:02
+Preferred installation mode : qt
+Trying to init installer in mode qt
+Mode qt successfully initialized
+Preparing to Install
+Preparing to Install
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Unpacking files
+Installing Arria II...
+Executing C:\altera_lite\16.0/quartus/bin64/unzip.exe -q -o "C:\Users\sgspe\Downloads/arria_lite-16.0.0.211.qdz"
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+
+Unpacking files
+Installing Cyclone IV...
+Executing C:\altera_lite\16.0/quartus/bin64/unzip.exe -q -o "C:\Users\sgspe\Downloads/cyclone-16.0.0.211.qdz"
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+
+Unpacking files
+Installing Cyclone V...
+Executing C:\altera_lite\16.0/quartus/bin64/unzip.exe -q -o "C:\Users\sgspe\Downloads/cyclonev-16.0.0.211.qdz"
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+
+Unpacking files
+Installing MAX II/V...
+Executing C:\altera_lite\16.0/quartus/bin64/unzip.exe -q -o "C:\Users\sgspe\Downloads/max-16.0.0.211.qdz"
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+
+Unpacking files
+Installing MAX 10 FPGA...
+Executing C:\altera_lite\16.0/quartus/bin64/unzip.exe -q -o "C:\Users\sgspe\Downloads/max10-16.0.0.211.qdz"
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+
+Unpacking files
+Unpacking files
+Unpacking files
+Installing ModelSim-Altera Starter Edition (Free)...
+Executing C:\Users\sgspe\Downloads/ModelSimSetup-16.0.0.211-windows.exe --mode unattended --unattendedmodeui minimal --installdir "C:\altera_lite\16.0" --modelsim_edition modelsim_ase --product_copy_name "none" --startmenugroup_name "Altera 16.0.0.211 Lite Edition"  --launch_from_quartus 1
+Script exit code: 0
+
+Script output:
+ It seems there is another instance of the installer running.
+Installation will continue, but you may run into issues
+
+Script stderr:
+ 
+
+Executing C:\altera_lite\16.0/vcredist2013_x64.exe /q /norestart
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+
+Executing C:\altera_lite\16.0/vcredist2010_x64.exe /q /norestart
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+
+Added QSYS_ROOTDIR environment variable with value C:\altera_lite\16.0\quartus\sopc_builder\bin in scope user
+Broadcasting environment changes
+Creating Uninstaller
+Creating uninstaller 25%
+Creating uninstaller 50%
+Creating uninstaller 75%
+Creating uninstaller 100%
+Installation completed
+Log finished 09/29/2016 at 19:22:00
+Executing C:\altera_lite\16.0/quartus/bin64/qreg.exe --force --tb2id --setqdir --file_assoc --jtag &
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+
+Executing C:\altera_lite\16.0/quartus/drivers/DPInst.exe /path usb-blaster-ii 
+Script exit code: 256
+
+Script output:
+ 
+
+Script stderr:
+ Program ended with an error exit code
+
+Error running C:\altera_lite\16.0/quartus/drivers/DPInst.exe /path usb-blaster-ii : Program ended with an error exit code
+Executing C:\altera_lite\16.0/quartus/bin64/quartus.exe  &
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+
+Executing C:\altera_lite\16.0/quartus/bin64/tb2_install.exe --webinstall &
+Script exit code: 0
+
+Script output:
+ 
+
+Script stderr:
+ 
+

@@ -1,0 +1,112 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/sgspe/Desktop/HDL files/output_files
+vmemory
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1488031895
+!i10b 1
+!s100 ?lcZ]zPhTKzkoPi7:2EeB0
+IK<Mz9@zWVJY0Qke0h5lc40
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 memory_sv_unit
+S1
+R0
+w1487887326
+8C:/Users/sgspe/Desktop/HDL files/memory.sv
+FC:/Users/sgspe/Desktop/HDL files/memory.sv
+L0 26
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1488031895.000000
+!s107 C:/Users/sgspe/Desktop/HDL files/memory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sgspe/Desktop/HDL files|C:/Users/sgspe/Desktop/HDL files/memory.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work {+incdir+C:/Users/sgspe/Desktop/HDL files}
+Z8 tCvgOpt 0
+vpovDisplay
+R1
+R2
+!i10b 1
+!s100 ^On5d@>]61M23e@i?T3je3
+IaDoA:=4;eBkJ2jgPafl573
+R3
+!s105 povDisplay_sv_unit
+S1
+R0
+w1488029295
+8C:/Users/sgspe/Desktop/HDL files/povDisplay.sv
+FC:/Users/sgspe/Desktop/HDL files/povDisplay.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/sgspe/Desktop/HDL files/povDisplay.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sgspe/Desktop/HDL files|C:/Users/sgspe/Desktop/HDL files/povDisplay.sv|
+!i113 1
+R6
+R7
+R8
+npov@display
+vUART_RX
+R1
+R2
+!i10b 1
+!s100 ZRJDE[4oUEoijZEe=iP]l0
+I5I_SEZhIY;WeA>kF`d0l<1
+R3
+!s105 UART2dRX_sv_unit
+S1
+R0
+w1483708148
+8C:/Users/sgspe/Desktop/HDL files/UART-RX.sv
+FC:/Users/sgspe/Desktop/HDL files/UART-RX.sv
+L0 23
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/sgspe/Desktop/HDL files/UART-RX.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sgspe/Desktop/HDL files|C:/Users/sgspe/Desktop/HDL files/UART-RX.sv|
+!i113 1
+R6
+R7
+R8
+n@u@a@r@t_@r@x
+vuart_tb
+R1
+!s110 1488032092
+!i10b 1
+!s100 0N3<J0T^cn9=:ocY:oA9[3
+IJN6Je<3zGKS@4g0aD_YfO2
+R3
+!s105 uart_tb_sv_unit
+S1
+R0
+w1488032078
+8C:/Users/sgspe/Desktop/HDL files/output_files/uart_tb.sv
+FC:/Users/sgspe/Desktop/HDL files/output_files/uart_tb.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1488032092.000000
+!s107 C:/Users/sgspe/Desktop/HDL files/output_files/uart_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sgspe/Desktop/HDL files/output_files|C:/Users/sgspe/Desktop/HDL files/output_files/uart_tb.sv|
+!i113 1
+R6
+!s92 -sv -work work {+incdir+C:/Users/sgspe/Desktop/HDL files/output_files}
+R8

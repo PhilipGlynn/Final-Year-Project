@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE 10M50DAF484C6GES
 set_global_assignment -name TOP_LEVEL_ENTITY povDisplay
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 16.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:10:22  FEBRUARY 23, 2017"
-set_global_assignment -name LAST_QUARTUS_VERSION "16.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION 16.0.0
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -58,12 +58,12 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_location_assignment PIN_N15 -to clk
 set_location_assignment PIN_Y19 -to RxD
 set_location_assignment PIN_H21 -to RESET
-set_location_assignment PIN_U22 -to led[3]
-set_location_assignment PIN_T20 -to led[4]
+set_location_assignment PIN_AA21 -to led[3]
+set_location_assignment PIN_AA22 -to led[4]
 set_location_assignment PIN_C7 -to hallSensor
-set_location_assignment PIN_D8 -to leds
-set_location_assignment PIN_AA22 -to led[0]
-set_location_assignment PIN_AA21 -to led[1]
+set_location_assignment PIN_A5 -to leds
+set_location_assignment PIN_T20 -to led[0]
+set_location_assignment PIN_U22 -to led[1]
 set_location_assignment PIN_U21 -to led[2]
 set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:/Users/sgspe/Desktop/HDL files/output_files" -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
@@ -72,14 +72,12 @@ set_global_assignment -name EDA_TEST_BENCH_NAME Uart_tb -section_id eda_simulati
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Uart_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Uart_tb -section_id Uart_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE output_files/uart_tb.sv -section_id Uart_tb
-set_global_assignment -name SYSTEMVERILOG_FILE "../HDL files/povDisplay.sv"
-set_global_assignment -name SYSTEMVERILOG_FILE "../HDL files/UART-RX.sv"
-set_global_assignment -name SYSTEMVERILOG_FILE "../HDL files/memory.sv"
+set_location_assignment PIN_D8 -to leds1
+set_location_assignment PIN_A4 -to leds2
+set_location_assignment PIN_E9 -to leds3
+set_global_assignment -name SYSTEMVERILOG_FILE "UART-RX.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE povDisplay.sv
+set_global_assignment -name SYSTEMVERILOG_FILE memory.sv
 set_global_assignment -name SYSTEMVERILOG_FILE DriveLed.sv
 set_global_assignment -name CDF_FILE output_files/Chain1.cdf
-set_global_assignment -name CDF_FILE output_files/Chain2.cdf
-set_global_assignment -name CDF_FILE output_files/rtl_work/Chain3.cdf
-set_location_assignment PIN_A4 -to leds1
-set_location_assignment PIN_A5 -to leds2
-set_location_assignment PIN_E9 -to leds3
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,10 +1,11 @@
 module DriveLed(
 input clk, //input clock 
-input reg [23:0]colourReg,
+input reg [23:0]rgb[13:0],
 output leds,
 output int position
 
 );
+
 
 	reg [31:0] ledsIndex = 0;
 	reg [31:0] clkCount = 0;
@@ -13,10 +14,11 @@ output int position
 	reg [31:0] zeroLow = 34;
 	reg [31:0] oneLow = 89;
 	reg [31:0] Period = 125;
+	reg [23:0]colourReg;
 	
 	always @ ( posedge clk)
 	begin       
-		
+		colourReg <=  rgb[ledsIndex];
 			if (position == 24)
 			begin
 					position = 0;

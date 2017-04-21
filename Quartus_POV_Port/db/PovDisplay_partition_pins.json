@@ -40,23 +40,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "led[5]",
-					"strict" : false
-				},
-				{
-					"name" : "led[6]",
-					"strict" : false
-				},
-				{
-					"name" : "led[7]",
-					"strict" : false
-				},
-				{
 					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "hallSensor",
 					"strict" : false
 				},
 				{

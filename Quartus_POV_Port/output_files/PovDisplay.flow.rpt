@@ -1,6 +1,6 @@
 Flow report for PovDisplay
-Sun Mar 26 17:55:04 2017
-Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Fri Apr 21 15:28:54 2017
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
 ---------------------
@@ -21,18 +21,18 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2016  Intel Corporation. All rights reserved.
-Your use of Intel Corporation's design tools, logic functions 
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Intel Program License 
-Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel MegaCore Function License Agreement, or other 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
 applicable license agreement, including, without limitation, 
 that your use is for the sole purpose of programming logic 
-devices manufactured by Intel and sold by Intel or its 
+devices manufactured by Altera and sold by Altera or its 
 authorized distributors.  Please refer to the applicable 
 agreement for further details.
 
@@ -41,20 +41,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Mar 26 17:55:04 2017       ;
-; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Flow Status                        ; Successful - Fri Apr 21 15:28:54 2017       ;
+; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; PovDisplay                                  ;
 ; Top-level Entity Name              ; povDisplay                                  ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C6GES                            ;
 ; Timing Models                      ; Preliminary                                 ;
-; Total logic elements               ; 391 / 49,760 ( < 1 % )                      ;
-;     Total combinational functions  ; 345 / 49,760 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 217 / 49,760 ( < 1 % )                      ;
-; Total registers                    ; 217                                         ;
-; Total pins                         ; 16 / 360 ( 4 % )                            ;
+; Total logic elements               ; 4,502 / 49,760 ( 9 % )                      ;
+;     Total combinational functions  ; 4,440 / 49,760 ( 9 % )                      ;
+;     Dedicated logic registers      ; 3,129 / 49,760 ( 6 % )                      ;
+; Total registers                    ; 3129                                        ;
+; Total pins                         ; 13 / 360 ( 4 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
+; Total memory bits                  ; 196,608 / 1,677,312 ( 12 % )                ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 ; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
@@ -67,7 +67,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/26/2017 17:54:06 ;
+; Start date & time ; 04/21/2017 15:27:13 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; PovDisplay          ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ agreement for further details.
 +--------------------------------------+-----------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                         ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+-----------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 119004509881956.149054724603392               ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 84440836025556.149278483302764                ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                            ; --            ; --          ; Uart_tb        ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Uart_tb                                       ; --            ; --          ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR        ; C:/Users/sgspe/Desktop/HDL files/output_files ; --            ; --          ; eda_simulation ;
@@ -91,9 +91,9 @@ agreement for further details.
 ; EDA_TIME_SCALE                       ; 1 ps                                          ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                            ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                             ; --            ; --          ; --             ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family)        ; --            ; povDisplay  ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)        ; --            ; povDisplay  ; Top            ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)        ; --            ; povDisplay  ; Top            ;
+; PARTITION_COLOR                      ; 16764057                                      ; --            ; povDisplay  ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                         ; --            ; povDisplay  ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                        ; --            ; povDisplay  ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                           ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW         ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                                  ; --            ; --          ; --             ;
@@ -105,26 +105,26 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:30     ; 1.0                     ; 613 MB              ; 00:00:50                           ;
-; Fitter                    ; 00:00:14     ; 1.0                     ; 1177 MB             ; 00:00:19                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 557 MB              ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.1                     ; 657 MB              ; 00:00:04                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 523 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:52     ; --                      ; --                  ; 00:01:18                           ;
+; Analysis & Synthesis      ; 00:00:33     ; 1.0                     ; 866 MB              ; 00:00:34                           ;
+; Fitter                    ; 00:00:39     ; 1.0                     ; 1331 MB             ; 00:00:38                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 772 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 901 MB              ; 00:00:06                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 779 MB              ; 00:00:01                           ;
+; Total                     ; 00:01:26     ; --                      ; --                  ; 00:01:22                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                         ;
-+---------------------------+------------------+------------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-JTHUD8A  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; DESKTOP-JTHUD8A  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; DESKTOP-JTHUD8A  ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-JTHUD8A  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-JTHUD8A  ; Windows 10 ; 10.0       ; x86_64         ;
-+---------------------------+------------------+------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; DESKTOP-4JNUKIU  ; Windows 8 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-4JNUKIU  ; Windows 8 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-4JNUKIU  ; Windows 8 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-4JNUKIU  ; Windows 8 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-4JNUKIU  ; Windows 8 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------

@@ -32,8 +32,8 @@ module memory (
                q
 );
  
-parameter DAT_WIDTH = 36;
-parameter ADDR_WIDTH = 7;
+parameter DAT_WIDTH = 24;
+parameter ADDR_WIDTH = 14;
 
  
 input      clk;

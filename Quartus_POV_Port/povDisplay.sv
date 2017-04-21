@@ -5,17 +5,27 @@ module povDisplay (input clk,
 						 output reg leds1, 
 						 output reg leds2, 
 						 output reg leds3, 
-						 output reg[7:0]led); //50Mhz CLK
+						 output reg[4:0]led); //50Mhz CLK
                     
 		  reg RecieveFlag;
 		  int position = 0;
-		  reg [31:0] horizontalPixles = 18;
+		  int position1 = 0;
+		  int position2 = 0;
+		  int position3 = 0;
+		  
+		  reg [31:0] horizontalPixles = 100;
 		  reg [31:0] rotationClkCount = 0;	
+		  reg [31:0] rotationClkCount1 = 0;	
 		  reg [23:0] colourReg ;
-		  reg [23:0] rgb [13:0];
+		  reg [23:0] verticleLine [55:0];
+		  reg [23:0] rgb1 [13:0];
 		  reg [23:0] rgb2 [13:0];
 		  reg [23:0] rgb3 [13:0];
 		  reg [23:0] rgb4 [13:0];
+		  reg [23:0] rgb1Buffer [13:0];
+		  reg [23:0] rgb2Buffer [13:0];
+		  reg [23:0] rgb3Buffer [13:0];
+		  reg [23:0] rgb4Buffer [13:0];
 		  reg [7:0] RxData;
 		  int rotationTime = 3640000;
 		  reg [13:0] memAddr = 0;
@@ -39,6 +49,11 @@ module povDisplay (input clk,
 		  reg [31:0] uartTimout = 0;
 		  reg receivePrev = 0;
 		  reg reveiveCurr = 0;
+		  reg resetAddress = 0;
+		  
+		  reg [13:0] deleteMe = 0;
+
+		  int ledNum = 0;
 		  
 		  UART_RX( 
 				.clk(clk),
@@ -59,45 +74,52 @@ module povDisplay (input clk,
 
 		  DriveLed driveLed1(
 				.clk(clk), //input clock 
-				.colourReg(rgb1),
+				.rgb(rgb1),
 				.leds(leds),
 				.position(position)
 		  );
 		  
 		   DriveLed driveLed2(
 				.clk(clk), //input clock 
-				.colourReg(colourReg),
+				.rgb(rgb2),
 				.leds(leds1),
-				.position(position)
+				.position(position1)
 		  );
 		   
 		   DriveLed driveLed3(
 				.clk(clk), //input clock 
-				.colourReg(colourReg),
+				.rgb(rgb3),
 				.leds(leds2),
-				.position(position)
+				.position(position2)
 		  );
 		  
 		   DriveLed driveLed4(
 				.clk(clk), //input clock 
-				.colourReg(colourReg),
+				.rgb(rgb4),
 				.leds(leds3),
-				.position(position)
+				.position(position3)
 		  );
+		  
+		  
+		  
+		  
+		  
+		  
 
-	  always @ (posedge RecieveFlag)
+	  always @ (posedge RecieveFlag) // receive from uart
 	  begin 		
-			if(prevLock != receivingLock)
-				begin
-					//prevLock = receivingLock;
-					memAddr = 0;
-				end						
+			
+			//find way of reseting memaddress
+			if(resetAddress == 1)
+			begin
+				memAddr = 0;
+			end
+
 			temp[charCounter] = RxData;
 			//led = ~RxData;
 			charCounter <= charCounter + 1;  
 			if(charCounter == 2)
 			begin   
-				charCounter <= 0;
 				forwardCount = 0;
 				backwardCount = 7;
 				for(forwardCount = 0; forwardCount <=7; forwardCount = forwardCount + 1)
@@ -107,86 +129,109 @@ module povDisplay (input clk,
 					 data[2][forwardCount] = temp[2][backwardCount];
 					 backwardCount = backwardCount - 1;
 				end
-				we = 1;
+				
+				we = 0;
 				inData <= {data[2], data[0],data[1]};
-				colourReg = {data[2], data[0],data[1]};
-				we = 0;                       
+				//colourReg = {data[2], data[0],data[1]};
+				we = 1;                       
 				memAddr = memAddr + 1;
+				
+				charCounter <= 0;
 			end    
 			receivingLockToggle = ~receivingLockToggle;
 	  end
 	  
-	  always @ ( negedge hallSensor)
-	  begin
-			led = ~led;
-			
-	  end
 	  
-	  always @ (posedge clk)
+	  
+	  always @ (posedge clk) // timeout uart if it stops recieveing 
 	  begin
 			if(uartTimout > 0)
 			begin
-				if(prevLock != receivingLock)
-				begin
-					prevLock = receivingLock;
-					//led = 8'hFF;
-				end
-				receivingLock = 1;
-				//led = 8'hff;													
+				receivingLock = 1;				
 				uartTimout = uartTimout - 1;
 			end
 			else
 			begin
-				if(prevLock != receivingLock)
-				begin
-					prevLock = receivingLock;
-					//led = 8'h00;
-					memAddrRead = 0;
-				end
 				receivingLock = 0;
+				resetAddress = 1;
 			end
 			reveiveCurr = receivingLockToggle;
 			if(reveiveCurr != receivePrev)
 			begin
 				uartTimout = 500000000;
 				receivePrev = reveiveCurr;
-			end	
-			
-			
-			
-			
-			rotationClkCount = rotationClkCount + 1;
-			if (position == 24)
+			end							
+		
+			if(memAddr == 0)
 			begin
-				if (rotationClkCount >= rotationTime / horizontalPixles)
+				resetAddress = 0;
+			end
+			// for debugging
+			led = ~(memStep/178);
+	
+			
+	  end
+	  
+	  always @ ( negedge hallSensor) // calculate rotation time
+	  begin
+			
+			
+	  end
+
+		always @ (posedge clk) // read from memory
+	  begin
+			if(uartTimout > 0)
+			begin
+				memStep = 0;
+				deleteMe = 53;
+			end
+			rotationClkCount = rotationClkCount + 1;
+			rotationClkCount1 = rotationClkCount1 + 1;
+			
+				if (rotationClkCount >= (rotationTime / horizontalPixles))
 				begin
 					// read in verticle line of pixles
-					if(receivingLock == 0) //receivelock is currently not functional
-					begin
-						  //led = 8'h01;
-						  memStep = memPos;
-						  for(forCounter = 0; forCounter == 56; forCounter = forCounter + 1)
-						  begin 
-						  //led = 8'h01;
-							 if(we == 0)
-							 begin
-								 oe = 1;
-								 memAddrRead = memStep;
-								 rgb[forCounter] = dataOut;
-								 oe = 0;
-								 memStep = memStep + 100; // change to use horizontal position when you get rotation timer working
-							 end  
-			 
-						  end
-						  memPos = memPos + 1;
-						  if(memPos == 100)
-						  begin
-								memPos = 0;
-						  end
+					if(receivingLock == 0) 
+					begin			
+						 memAddrRead = memStep;
+						 if(deleteMe >= 0 &&  deleteMe <= 13)
+						 begin
+							rgb1Buffer[deleteMe] = dataOut;
+						 end
+						 if(deleteMe > 13 &&  deleteMe <= 27)
+						 begin
+							rgb2Buffer[deleteMe- 14] = dataOut;
+						 end
+						 if(deleteMe > 27 &&  deleteMe <= 41)
+						 begin
+							rgb3Buffer[deleteMe - 28] = dataOut;
+						 end
+						 if(deleteMe > 41 &&  deleteMe <= 55)
+						 begin
+							rgb4Buffer[deleteMe - 42] = dataOut;
+						 end
+						 deleteMe = deleteMe + 1;
+						 if(deleteMe ==  55)
+						 begin
+							rgb1 = rgb1Buffer;
+							rgb2 = rgb2Buffer;
+							rgb3 = rgb3Buffer;
+							rgb4 = rgb4Buffer;
+							deleteMe = 0;
+							rotationClkCount = 0;
+						 end
+						 memStep = memStep + 1; // change to use horizontal position when you get rotation timer working
+						 if(memStep > 5499)
+						 begin
+							  memStep = 0;
+							  
+						 end
 					end      
-				end
-			end
+					
+				end	
 	  end
-	                    
+
+
+	  
                      
 endmodule		
